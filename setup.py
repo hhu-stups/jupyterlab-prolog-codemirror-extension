@@ -50,7 +50,7 @@ setup_args = dict(
     license_file="LICENSE",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_namespace_packages(exclude=['labextension*'],),
     zip_safe=False,
     include_package_data=True,
     python_requires=">=3.7",

@@ -1,18 +1,33 @@
 # JupyterLab Prolog CodeMirror Extension
 
-A JupyterLab extension providing a Prolog CodeMirror mode based on [extension-cookiecutter-ts](https://github.com/jupyterlab/extension-cookiecutter-ts).
+A JupyterLab extension providing a Prolog CodeMirror mode.
 
-It can be used with a Juypter kernel for Prolog:
-- [A Jupyter kernel for SICStus Prolog](https://github.com/anbre/sicstus-prolog-jupyter-kernel)
-- [A Jupyter kernel for SWI-Prolog](https://github.com/anbre/swi-prolog-jupyter-kernel)
+Based on [extension-cookiecutter-ts](https://github.com/jupyterlab/extension-cookiecutter-ts).
 
-**Note:** The extension is still under development and so far, only a development installation is possible.
 
 ## Requirements
 
-- JupyterLab >= 3.0
+- JupyterLab >= 3.1
 
-## Development install
+## Install
+
+To install the extension, execute:
+
+```bash
+pip install jupyterlab_prolog_codemirror_extension
+```
+
+## Uninstall
+
+To remove the extension, execute:
+
+```bash
+pip uninstall jupyterlab_prolog_codemirror_extension
+```
+
+## Contributing
+
+### Development install
 
 Notes:
 - You will need NodeJS to build the extension package.
@@ -49,14 +64,25 @@ By default, the `jlpm build` command generates the source maps for this extensio
 jupyter lab build --minimize=False
 ```
 
-## Development uninstall
+### Development uninstall
 
 ```bash
 pip uninstall jupyterlab_prolog_codemirror_extension
 ```
 
-In development mode, you will also need to remove the symlink created by `jupyter labextension develop` command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions` folder is located. Then you can remove the symlink named `jupyterlab_prolog_codemirror_extension` within that folder.
+In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
+command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
+folder is located. Then you can remove the symlink named `jupyterlab_prolog_codemirror_extension` within that folder.
 
-## Packaging the extension
+### Upload to PyPI
 
-See [RELEASE](RELEASE.md)
+This extension is available as a Python package on the [Python Package Index](https://pypi.org/). A new version of the package can be published in the following way:
+1. Install the requirements build and twine:
+  `pip install build twine`
+2. Increase the version in [package.json](./package.json)
+3. Create the distribution files:
+  `python -m build`
+4. Upload the package to PyPI:
+  `twine upload dist/*`
+
+For further information, see the [Packaging Python Projects Tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/).

@@ -1,16 +1,13 @@
 {
   "name": "jupyterlab_prolog_codemirror_extension",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A JupyterLab extension providing a Prolog CodeMirror mode.",
   "keywords": [
     "jupyter",
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": " ",
-  "bugs": {
-    "url": " /issues"
-  },
+  "homepage": "https://github.com/anbre/jupyterlab-prolog-codemirror-extension",
   "license": "BSD-3-Clause",
   "author": {
     "name": "Anne Brecklinghaus",
@@ -48,7 +45,7 @@
     "prettier:check": "jlpm prettier:base --check",
     "stylelint": "jlpm stylelint:check --fix",
     "stylelint:check": "stylelint --cache \"style/**/*.css\"",
-    "watch": "jlpm run watch:src & jlpm run watch:labextension",
+    "watch": "run-p watch:src watch:labextension",
     "watch:src": "tsc -w",
     "watch:labextension": "jupyter labextension watch ."
   },
