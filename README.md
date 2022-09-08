@@ -1,9 +1,8 @@
 # JupyterLab Prolog CodeMirror Extension
 
-A JupyterLab extension providing a Prolog CodeMirror mode.
+A JupyterLab extension providing a Prolog CodeMirror mode based on [extension-cookiecutter-ts](https://github.com/jupyterlab/extension-cookiecutter-ts).
 
-Based on [extension-cookiecutter-ts](https://github.com/jupyterlab/extension-cookiecutter-ts).
-
+Also see the [Jupyter kernel for Prolog](https://github.com/anbre/prolog-jupyter-kernel).
 
 ## Requirements
 
